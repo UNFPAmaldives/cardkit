@@ -103,7 +103,7 @@ angular.module("cardkitApp", ["ngAnimate", "ngCookies", "ngResource", "ngRoute",
                             },
                             width: !0
                         },
-                        draggable: { x: !1, y: !0 },
+                        draggable: { x: !0, y: !0 },
                         showHoverArea: !0
                     },
                     headline: {
@@ -278,7 +278,7 @@ angular.module("cardkitApp", ["ngAnimate", "ngCookies", "ngResource", "ngRoute",
                         if (!m.elementDragging && a.showHoverArea) {
                             var b = this.getBBox();
                             this.hoverRect = m.rect(b.x, b.y, b.width, b.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.00)" }), this.before(this.hoverRect)
-                        }
+                        }                        
                     }, function() {!m.elementDragging && a.showHoverArea && this.hoverRect && this.hoverRect.remove() });
                     var f = a;
                     delete f.$$hashKey, i(s, a), a.draggable && (s.undrag(), angular.isObject(a.draggable) ? s.altDrag(a.draggable.x, a.draggable.y) : s.altDrag(!0, !0))
