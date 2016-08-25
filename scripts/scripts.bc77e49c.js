@@ -277,10 +277,7 @@ angular.module("cardkitApp", ["ngAnimate", "ngCookies", "ngResource", "ngRoute",
                     a.draggable && s.hover(function() {
                         if (!m.elementDragging && a.showHoverArea) {
                             var b = this.getBBox();
-                            this.hoverRect = m.rect(b.x, b.y, b.width, b.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.05)" }), this.before(this.hoverRect)
-                        }
-                        if(m.elementDragging && element.showHoverArea) {
-                            this.unhoveringDuringDragging = false;
+                            this.hoverRect = m.rect(b.x, b.y, b.width, b.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.00)" }), this.before(this.hoverRect)
                         }
                     }, function() {!m.elementDragging && a.showHoverArea && this.hoverRect && this.hoverRect.remove() });
                     var f = a;
@@ -313,7 +310,7 @@ angular.module("cardkitApp", ["ngAnimate", "ngCookies", "ngResource", "ngRoute",
                     g = function() {
                         if (m.elementDragging = !1, this.hoverRect) {
                             var a = this.hoverRect.getBBox();
-                            this.hoverRect.remove(), this.hoverRect = m.rect(a.x, a.y, a.width, a.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.05)" }), this.before(this.hoverRect)
+                            this.hoverRect.remove(), this.hoverRect = m.rect(a.x, a.y, a.width, a.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.00)" }), this.before(this.hoverRect)
                         }
 
                     }
