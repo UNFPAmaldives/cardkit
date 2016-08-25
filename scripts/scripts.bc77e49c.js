@@ -277,8 +277,12 @@ angular.module("cardkitApp", ["ngAnimate", "ngCookies", "ngResource", "ngRoute",
                     a.draggable && s.hover(function() {
                         if (!m.elementDragging && a.showHoverArea) {
                             var b = this.getBBox();
-                            this.hoverRect = m.rect(b.x, b.y, b.width, b.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.00)" }), this.before(this.hoverRect)
-                        }                        
+                            this.hoverRect = m.rect(b.x, b.y, b.width, b.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.05)" }), this.before(this.hoverRect)
+                        }
+                        if(this.unhoveringDuringDragging){
+                            this.hoverRect.remove();
+                            this.unhoveringDuringDragging = false;
+                        }
                     }, function() {!m.elementDragging && a.showHoverArea && this.hoverRect && this.hoverRect.remove() });
                     var f = a;
                     delete f.$$hashKey, i(s, a), a.draggable && (s.undrag(), angular.isObject(a.draggable) ? s.altDrag(a.draggable.x, a.draggable.y) : s.altDrag(!0, !0))
@@ -310,7 +314,10 @@ angular.module("cardkitApp", ["ngAnimate", "ngCookies", "ngResource", "ngRoute",
                     g = function() {
                         if (m.elementDragging = !1, this.hoverRect) {
                             var a = this.hoverRect.getBBox();
-                            this.hoverRect.remove(), this.hoverRect = m.rect(a.x, a.y, a.width, a.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.00)" }), this.before(this.hoverRect)
+                            this.hoverRect.remove(), this.hoverRect = m.rect(a.x, a.y, a.width, a.height, 0, 0).attr({ fill: "rgba(0, 0, 0, 0.05)" }), this.before(this.hoverRect)
+                        }
+                        if(a.elementDragging && element.showHoverArea) {
+                            this.unhoveringDuringDragging = false;
                         }
                     }
             });
