@@ -141,7 +141,7 @@ angular.module('cardkitApp')
               var hoverBBox = this.hoverRect.getBBox();
               this.hoverRect.remove();
               this.hoverRect = s.rect(hoverBBox.x, hoverBBox.y, hoverBBox.width, hoverBBox.height, 0, 0).attr({
-                fill: 'rgba(0, 0, 0, 0.00)'
+                fill: 'rgba(0, 0, 0, 0.05)'
               });
               this.before(this.hoverRect);
             }
@@ -399,7 +399,7 @@ angular.module('cardkitApp')
                 if(!s.elementDragging && element.showHoverArea) {
                   var bBox = this.getBBox();
                   this.hoverRect = s.rect(bBox.x, bBox.y, bBox.width, bBox.height, 0, 0).attr({
-                    fill: 'rgba(0, 0, 0, 0.00)'
+                    fill: 'rgba(0, 0, 0, 0.05)'
                   });
                   this.before(this.hoverRect);
                 }
