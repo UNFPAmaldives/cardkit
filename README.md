@@ -4,7 +4,7 @@
 
 ## Version 1.1.1
 
-### 2016 [Chris Hutchinson](http://www.github.com/chrishutchinson) for The [Times and Sunday Times](http://www.github.com/times)
+### 2016 [John Zuwasti Curran](http://www.twitter.com/gonow), Strategic Advocacy and Innovative Partnerships Adviser, [UNFPA](http://www.unfpa.org/)
 
 CardKit is flexible, image / infographic creation tool, with simple, configuration options. 
 Create content formatted for social media that is 100% UNFPA Identity Style Guide compliant. Your country office's communications just got a lot easier — and better looking.
